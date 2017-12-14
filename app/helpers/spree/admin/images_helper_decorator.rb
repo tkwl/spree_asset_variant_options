@@ -1,7 +1,7 @@
 Spree::Admin::ImagesHelper.class_eval do
   alias :original_options_text_for :options_text_for
 
-  def options_text_for image
+  def options_text_for_new image
     if image.variants.any?
       image.variants.map { |variant| variant.sku_and_options_text }.join('; ')
     else
