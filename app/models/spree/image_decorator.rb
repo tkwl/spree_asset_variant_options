@@ -1,5 +1,5 @@
 Spree::Image.class_eval do
-  attr_accessor :viewable_ids
+  attr_accessor :viewable_ids, :position
 
   has_many :variant_images, class_name: '::Spree::VariantImage'
   has_many :variants, through: :variant_images
